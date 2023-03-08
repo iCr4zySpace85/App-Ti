@@ -7,7 +7,7 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'IDANA APP',
+      title: 'IDANA APPLICATION',
       debugShowCheckedModeBanner: false,
       initialRoute: LoginPage.id,
       routes: {
