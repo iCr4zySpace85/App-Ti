@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
-import 'app.dart';
 
-void main() => runApp(Myapp());
+import 'pages/splash_page.dart';
 
-class Myapp extends StatelessWidget {
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'IDANA APPLICATION TI',
       debugShowCheckedModeBanner: false,
-      initialRoute: LoginPage.id,
-      routes: {
-        LoginPage.id: (context) => LoginPage(),
-      },
+      title: 'IDANA APLICATION TI',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: SplashPage(),
     );
   }
 }

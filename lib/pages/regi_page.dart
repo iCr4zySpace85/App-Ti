@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import '../pages/regi_page.dart';
 import '../utils/color.dart';
 import '../widgets/btn_widget.dart';
 import '../widgets/herder_container.dart';
 
-class LoginPage extends StatefulWidget {
+class RegPage extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _RegPageState createState() => _RegPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegPageState extends State<RegPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
         padding: EdgeInsets.only(bottom: 30),
         child: Column(
           children: <Widget>[
-            HeaderContainer("Login"),
+            HeaderContainer("Register"),
             Expanded(
               flex: 1,
               child: Container(
@@ -25,35 +24,27 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
+                    _textInput(hint: "Fullname", icon: Icons.person),
                     _textInput(hint: "Email", icon: Icons.email),
+                    _textInput(hint: "Phone Number", icon: Icons.call),
                     _textInput(hint: "Password", icon: Icons.vpn_key),
-                    Container(
-                      margin: EdgeInsets.only(top: 10),
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        "Forgot Password?",
-                      ),
-                    ),
                     Expanded(
                       child: Center(
                         child: ButtonWidget(
-                          onClick: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => RegPage()));
+                          btnText: "REGISTER",
+                          onClick: (){
+                            Navigator.pop(context);
                           },
-                          btnText: "LOGIN",
                         ),
                       ),
                     ),
                     RichText(
                       text: TextSpan(children: [
                         TextSpan(
-                            text: "Don't have an account ? ",
+                            text: "Already a member ? ",
                             style: TextStyle(color: Colors.black)),
                         TextSpan(
-                            text: "Registor",
+                            text: "Login",
                             style: TextStyle(color: orangeColors)),
                       ]),
                     )
@@ -66,6 +57,7 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+
 
   Widget _textInput({controller, hint, icon}) {
     return Container(
@@ -85,4 +77,5 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+
 }
