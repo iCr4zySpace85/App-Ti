@@ -1,8 +1,5 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-
-
 import '../utils/color.dart';
 import 'login_page.dart';
 
@@ -28,12 +25,12 @@ class _SplashPageState extends State<SplashPage> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-              colors: [orangeColors, orangeLightColors],
+              colors: [whiteColor, whiteColorT],
               end: Alignment.bottomCenter,
               begin: Alignment.topCenter),
         ),
         child: Center(
-          child: Image.asset("assets/logo.png"),
+          child: Image.asset('lib/assets/logo.png', width: 200, height: 200),
         ),
       ),
     );

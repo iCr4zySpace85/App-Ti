@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../utils/color.dart';
 import '../widgets/btn_widget.dart';
 import '../widgets/herder_container.dart';
+import '../widgets/herder_conta.dart';
 
 class RegPage extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _RegPageState extends State<RegPage> {
         padding: EdgeInsets.only(bottom: 30),
         child: Column(
           children: <Widget>[
-            HeaderContainer("Register"),
+            HeaderConta("Tus Registros"),
             Expanded(
               flex: 1,
               child: Container(
@@ -31,7 +32,7 @@ class _RegPageState extends State<RegPage> {
                     Expanded(
                       child: Center(
                         child: ButtonWidget(
-                          btnText: "REGISTER",
+                          btnText: "Ver Retardos",
                           onClick: (){
                             Navigator.pop(context);
                           },
@@ -41,11 +42,8 @@ class _RegPageState extends State<RegPage> {
                     RichText(
                       text: TextSpan(children: [
                         TextSpan(
-                            text: "Already a member ? ",
+                            text: "IDANA COM.MX | COMPANY",
                             style: TextStyle(color: Colors.black)),
-                        TextSpan(
-                            text: "Login",
-                            style: TextStyle(color: orangeColors)),
                       ]),
                     )
                   ],

@@ -17,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
         padding: EdgeInsets.only(bottom: 30),
         child: Column(
           children: <Widget>[
-            HeaderContainer("Login"),
+            HeaderContainer("Inicio de Sesión"),
             Expanded(
               flex: 1,
               child: Container(
@@ -25,13 +25,14 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
-                    _textInput(hint: "Email", icon: Icons.email),
-                    _textInput(hint: "Password", icon: Icons.vpn_key),
+                    _textInput(hint: "Correo Electrónico", icon: Icons.email),
+                    _textInput(hint: "Contraseña", icon: Icons.vpn_key),
                     Container(
                       margin: EdgeInsets.only(top: 10),
                       alignment: Alignment.centerRight,
                       child: Text(
-                        "Forgot Password?",
+                        "¿Olvidaste tu Contraseña?",
+                        style: TextStyle(color: Colors.green)
                       ),
                     ),
                     Expanded(
@@ -43,18 +44,15 @@ class _LoginPageState extends State<LoginPage> {
                                 MaterialPageRoute(
                                     builder: (context) => RegPage()));
                           },
-                          btnText: "LOGIN",
+                          btnText: "Continuar",
                         ),
                       ),
                     ),
                     RichText(
                       text: TextSpan(children: [
                         TextSpan(
-                            text: "Don't have an account ? ",
+                            text: "INADA COM.MX | COMPANY",
                             style: TextStyle(color: Colors.black)),
-                        TextSpan(
-                            text: "Registor",
-                            style: TextStyle(color: orangeColors)),
                       ]),
                     )
                   ],

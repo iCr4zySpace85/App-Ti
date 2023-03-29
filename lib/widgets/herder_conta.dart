@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import '../utils/color.dart';
 
-class HeaderContainer extends StatelessWidget {
+class HeaderConta extends StatelessWidget {
   var text = "Login";
 
-  HeaderContainer(this.text);
+  HeaderConta(this.text);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.4,
+      height: MediaQuery.of(context).size.height * 0.2,
       decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: [whiteColor, whiteColorT],
