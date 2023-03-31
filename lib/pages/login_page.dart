@@ -12,6 +12,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    TextEditingController username = TextEditingController(text: "");
+    TextEditingController password = TextEditingController(text: "");
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(bottom: 30),
@@ -25,15 +27,19 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
-                    _textInput(hint: "Correo Electrónico", icon: Icons.email),
-                    _textInput(hint: "Contraseña", icon: Icons.vpn_key),
+                    _textInput(
+                        controller: username,
+                        hint: "Correo Electrónico",
+                        icon: Icons.email),
+                    _textInput(
+                        controller: password,
+                        hint: "Contraseña",
+                        icon: Icons.vpn_key),
                     Container(
                       margin: EdgeInsets.only(top: 10),
                       alignment: Alignment.centerRight,
-                      child: Text(
-                        "¿Olvidaste tu Contraseña?",
-                        style: TextStyle(color: Colors.green)
-                      ),
+                      child: Text("¿Olvidaste tu Contraseña?",
+                          style: TextStyle(color: Colors.green)),
                     ),
                     Expanded(
                       child: Center(
